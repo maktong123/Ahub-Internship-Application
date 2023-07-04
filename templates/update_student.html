@@ -1,0 +1,24 @@
+<!-- update_profile.html -->
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<head>
+  <link rel="stylesheet" href="{% static 'edit.css' %}">
+</head>
+
+<div class="update_container">
+  <h2 class="h2" id="update_h2"><span class="border-left"></span>UPDATE PROFILE</h2>
+  <div class="row">
+    <div class="col-md-6" id="update_col-md-6">
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary" id="update_btn-primary">Save</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+

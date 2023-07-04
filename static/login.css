@@ -1,0 +1,68 @@
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #6355ca;
+    border-radius: 15px;
+    color: #6355ca
+  }
+  
+  .login-header {
+    margin-bottom: 20px;
+  }
+  
+  .emailogin, .passwordlogin {
+    margin-bottom: 15px;
+  }
+  
+  .loginbtn button {
+    width: 100%;
+  }
+  
+  .fpassword, .noaccount {
+    margin-top: 10px;
+  }
+  
+  .error {
+    color: red;
+  }
+  
+  /* Bootstrap classes */
+  
+  .container {
+    max-width: 600px;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .mb-3 {
+    margin-bottom: 15px;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  .mt-2 {
+    margin-top: 10px;
+  }
+  
+  .text-danger {
+    color: red;
+  }
+  #submit{
+      width: 200px;
+      height: 50px;
+      padding: 5px;
+      text-align: center;
+      border-radius: 10px;
+      border: 1px solid #fff;
+      background-color: #6355ca;
+      color: #fff;
+  }
+  #submit:hover{
+      background-color: #f2ac21;
+      transition: all 1s ease-in;
+  }

@@ -1,0 +1,32 @@
+.update_container{
+    max-width: 800px;
+    margin-left: 40%;
+  }
+  #update_h2{
+    margin-top: 100px;
+    color: #6355ca;
+    margin-bottom: 30px;
+  }
+  #update_col-md-6{
+    line-height:20px;
+    color: #6355ca;
+  }
+  #update_btn-primary{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 200px;
+  height: 50px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background-color: #6355ca;
+  color: #fff;
+  margin-top: -10px;
+  margin-left: 5px;
+
+  }
+  #update_btn-primary:hover{
+  background-color: #f2ac21;
+  transition: all 1s ease-in;
+}

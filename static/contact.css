@@ -1,0 +1,188 @@
+*{
+    font-family: Arial, sans-serif;
+    
+}
+.containe {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+    
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.div-two p{
+    text-align: center;
+    font-size: 14px;
+    color: #000000;
+}
+.div-three{
+    margin-top: 25px;
+    width: 223px;
+    height: 57.56;
+    color: #000000;
+    margin-left: 50px;
+    
+    
+}
+.div-three p, a{
+    font-size: 12.8px;
+}
+.div-three a{
+    font-size: 12.8px;
+    color: #F26024;
+}
+.div-two h3{
+    font-weight: bold;
+    font-size:16x; 
+    color: #f2ac21;
+}
+h2{
+    text-align: center
+}
+.border-left{
+    padding: 1px;
+    background-color: #6355ca;
+    margin-right: 5px;
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+input[type="submit"] {
+    background-color: #6355ca;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.contact-sec-two{
+    max-width: 500px;
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+@media (max-width: 399px){
+    /* Styles for screens smaller than 768px */
+    .containe {
+        max-width: 500px;
+        margin: 0 auto; 
+    }
+    .div-three{
+        margin-top: 25px;
+        width: 223px;
+        height: 57.56;
+        color: #000000;
+        margin-left: 50px;
+        margin-left: 50px;
+        font-size: 12.8px;
+
+        
+        
+    }
+    .contact-sec-two{
+        margin-top: 350px;
+        margin-left: -300px;
+        font-size: 12.8px;
+
+    }
+    .text-center{
+        font-size: 24px;
+        text-align: center;
+    }
+    .div-two h3{
+        font-size:22px; 
+        color: #6355ca;
+    }
+}
+@media (min-width: 400px) and (max-width: 767px) {
+    /* Styles for screens between 768px and 991px */
+    .containe {
+        max-width: 500px;
+        margin: 0 auto; 
+    }
+    .div-three{
+        margin-top: 25px;
+        width: 223px;
+        height: 57.56;
+        color: #000000;
+        margin-left: 90px;
+        font-size: 12.8px;
+
+        
+        
+    }
+    .contact-sec-two{
+        margin-top: 350px;
+        margin-left: -350px;
+        font-size: 12.8px;
+
+    }
+    .text-center{
+        font-size: 24px;
+        text-align: center;
+    }
+    .div-two h3{
+        font-size:22px; 
+        color: #6355ca;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Styles for screens between 768px and 991px */
+    .containe{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+        border: 2px solid #F26024;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .div-two p{
+        text-align: center;
+        font-size: 14px;
+        color: #000000;
+    }
+    .div-three{
+        margin-top: 25px;
+        width: 223px;
+        height: 57.56;
+        color: #000000;
+        margin-left: 50px;
+        
+        
+    }
+    .div-three p, a{
+        font-size: 12.8px;
+    }
+    .div-three a{
+        font-size: 12.8px;
+        color: #6355ca;
+    }
+    .div-two h3{
+        font-weight: bold;
+        font-size:16x; 
+        color: #6355ca;
+    }
+    h2{
+        text-align: center
+    }
+    
+}
