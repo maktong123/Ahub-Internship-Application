@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ahub - Empowering Tech Careers</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/ed7eb456dc.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+
+<body>
+  <!-- Navigation Menu -->
+  
+  {% block navbar%}
+  <nav class="navbar navbar-expand-lg fixed-top ">
+    
+  <div class="container-fluid">
+    <a  class="logo" href="#">
+      <img src="{% static 'images/ahub.png' %}" alt="Ahub">
+      </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Courses</a>
+          </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#">Attendance</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"> <button class=" apply btn btn-outline-success" type="submit">Apply</button></a>
+          </li>
+      </ul>
+       
+      
+    </div>
+  </div>
+</nav>
+
+{%endblock%}
+
+{% block content %}
+
+
+{% endblock %}
+
+{% block footer%}
+ <!-- Footer -->
+ <footer class="bg-dark text-white py-3">
+    <div class="container text-center">
+    <p>&copy; {{ current_year }} Ahub. All rights reserved.</p>
+  </div>
+  <div class="social-links container text-center">
+    <a href="#"><i class="fa fa-facebook " aria-hidden="true" ></i></a>
+    <a href="#"><i class="fa fa-twitter " aria-hidden="true"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+   <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+   <a href="#"><i class="fa-brands fa-github"></i></a>
+    </div>
+</footer>
+{% endblock %}
+
+<!-- Bootstrap JS and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+</script>
+</body>
+
+</html>

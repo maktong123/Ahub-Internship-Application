@@ -1,0 +1,145 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}Ahub|Home Page{% endblock title %}
+
+{% block content %}
+
+  
+  <section class="hero">
+  <div class="card text-bg-dark">
+    <img src="{% static 'images/intern_image.jpg' %}" alt="interns Image" class="card-img">
+    <div class="card-img-overlay">
+      <h1 class="card-title">Unlock Your Tech Potential</h1>
+      <p class="card-text">Welcome to A-hub, where we empower individuals with the skills and knowledge for successful tech careers.</p>
+      <a href="#apply" class=" apply-now btn btn-primary btn-lg">Apply Now</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- animated laptop -->
+  <section class="animated_laptop">
+    <div class="wrapper">
+    <div class="laptop">
+    <div class="screen">
+     <div class="wallpaper">
+      <div class="terminal"></div>
+    </div>
+     </div>
+     <div class="keyboard"></div>
+     </div>
+    </div>
+    </section>
+  
+
+  <!-- Courses Offered Section -->
+  <section id="courses" class="py-5 ">
+    <div class="container">
+
+      <h2 class="text-center mb-4"><span class="border-left"></span>Our Courses</h2>
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4 course-container">
+          <div class="card course-card animate__animated animate__zoomIn">
+            <div class="card-body course-content " onclick="zoomCard()" >
+              <div class="course-icon"><i class="fa fa-code  fa-3x"></i></div><h4 class="card-title">Web Development</h4>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4 course-container">
+          <div class="card course-card animate__animated animate__zoomIn">
+            <div class="card-body course-content" onclick="zoomCard()">
+              <div class="course-icon"><i class="fa fa-mobile fa-3x"></i></div> <h4 class="card-title">App Development</h4>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4 course-container">
+          <div class="card course-card animate__animated animate__zoomIn">
+            <div class="card-body course-content" onclick="zoomCard()">
+              <div class="course-icon"><i class="fa fa-chart-line fa-3x"></i> </div><h4 class="card-title">Data Science</h4>
+            </div>
+          </div>
+        </div>
+       <div class="col-lg-4 col-md-6 mb-4 course-container">
+          <div class="card course-card animate__animated animate__zoomIn">
+            <div class="card-body course-content" onclick="zoomCard()">
+              <div class="course-icon"><i class="fab fa-digital-ocean fa-3x"></i></div> <h4 class="card-title"></i>Digital Marketing</h4>
+            </div>
+          </div>
+        </div>
+         <div class="col-lg-4 col-md-6 mb-4 course-container">
+          <div class="card course-card animate__animated animate__zoomIn">
+            <div class="card-body course-content" onclick="zoomCard()">
+              <div class="course-icon"><i class="fa fa-file-alt fa-3x"></i></div><h4 class="card-title">Content Management</h4>
+            </div>
+          </div>
+        </div>
+         <div class="col-lg-4 col-md-6 mb-4 course-container">
+          <div class="card course-card animate__animated animate__zoomIn">
+            <div class="card-body course-content" onclick="zoomCard()">
+              <div class="course-icon"><i class="fa-brands fa-figma fa-3x"></i></div><h4 class="card-title">UX/UI Design</h4>
+            </div>
+          </div>
+        </div>
+         <div class="col-lg-4 col-md-6 mb-4 course-container">
+          <div class="card course-card animate__animated animate__zoomIn">
+            <div class="card-body course-content" onclick="zoomCard()">
+              <div class="course-icon"><i class="fa fa-palette fa-3x"></i></div> <h4 class="card-title">Graphic Design</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4 course-container">
+          <div class="card course-card animate__animated animate__zoomIn">
+            <div class="card-body course-content" onclick="zoomCard()">
+              <div class="course-icon"><i class="fa fa-hands-helping fa-3x"></i></div><h4 class="card-title">Mentorship</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- testimonial -->
+    <section class="testimonials">
+      <h2 class="text-center">What interns are saying about us.</h2>
+      <div class="testimonial-container">
+      <div class="testimonial active">
+      <img src="client1.png" alt="Client 1">
+      <p>Working with Ahub has been an incredible experience. The supportive and nurturing environment allowed me to grow both personally and professionally. I am grateful for the opportunities and guidance I received throughout my internship.</p>
+      <cite>- Princess Harry</cite>	
+      </div>
+      <div class="testimonial">
+        <img src="client2.png" alt="Client 2">
+        <p> Ahub provided me with the perfect platform to explore my passions and gain real-world experience. The mentors and fellow interns were like a second family, always ready to lend a helping hand. I can't thank Ahub enough for shaping my career.</p>
+        <cite>- Dafam Abel Nansak</cite>
+      </div>
+      <div class="testimonial">
+        <img src="client3.png" alt="Client 3">
+        <p>I feel incredibly fortunate to have been part of Ahub's internship program. The collaborative culture and emphasis on learning made every day exciting and fulfilling. It's an organization that truly cares about its interns and their success. </p>
+        <cite>-Abdul Usman</cite>
+      </div>
+      <div class="testimonial">
+        <img src="client4.png" alt="Client 4">
+        <p>Ahub exceeded all my expectations as an internship provider. The level of professionalism, the challenging projects, and the constant encouragement pushed me to reach new heights. It's a place where dreams come true. </p>
+        <cite>-Policarp Julius</cite>
+      </div>
+      </div>
+    </section>
+
+  
+
+  <!-- Apply Section -->
+  <section id="intern-login" class="py-5">
+    <div class="container">
+      <div class=" login-btn container text-center">
+        <h2 class="text-center intern-text">Already an intern?</h2>
+        <a href="#" class=" for-intern btn btn-secondary btn-sm">Login</a>
+        </div>
+      <!-- <a href="#apply" class=" for-intern btn btn-primary btn-lg">Apply for Internship</a> -->
+      <!-- Add internship application form here -->
+    </div>
+  </section>
+  {% endblock content %}
+
+ 
