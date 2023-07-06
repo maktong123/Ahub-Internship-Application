@@ -1,0 +1,49 @@
+{% extends 'main.html' %}
+{% load static %}
+{% load tz %}
+{% block title %}Ahub|Check_In Page{% endblock title %}
+
+{% block content %}
+<body>
+    <form action="", method = "POST">
+        {%csrf_token%}
+        <div class="check_in_Main">
+            <div class="check_in_Header">
+                <div class="titler">
+                    <h1>Check - In</h1>
+                </div>
+                <div class="check_in_Flyer">Check - In, <span class ="surname">Surname!</span></div>
+            </div>
+            <div class="check_in_Body">
+                <div class="check_in_days">
+                    <div class="check_in_days_present_region">
+                        <h4 class="check_in_days_present">DAYS PRESENT</h4>
+                        <span class="check_in_days_number">
+                            {{daysPresent}}
+                        </span>
+                    </div>
+                    <div class="check_in_days_absent_region">
+                        <h4 class="check_in_days_absent">DAYS ABSENT</h4>
+                        <span class="check_in_days_number">
+                            {{daysAbsent}}
+                        </span>
+                    </div>
+                </div>
+                <div class="check_in_date_check_region">
+                    <h4><span class="date">{{current_day}}</span></h4>
+                    <div class="check_in_region">
+                        <div class="check_in_check_in">
+                            <label for="check_in">Check In</label>
+                            {{form.checkIn}}
+                        <!-- <input type="checkbox" name="check_in" id="check_in_button"> -->
+                        </div>
+                        
+                        <button type="submit" class = "button check_in">Proceed</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+</body>
+{% endblock content %}
