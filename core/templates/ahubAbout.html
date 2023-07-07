@@ -1,0 +1,123 @@
+{%extends 'main.html'%}
+{%load static%}
+{%block content%}
+
+<body>
+    <h2 class = "headerAbout">About</h2>
+    <div class="about_body">
+        <div class="about_first_region">
+            <div class="about_first_region_up">
+                <div class="img_region">
+                    <img src="{%static 'images/group1.jpg'%}" alt="image1">
+                </div>
+                <div class="about_writeUp">
+                    <h4 class="about_header">Mission</h4>
+                    <p>
+                        A-Hub is inspiring empowerment and growth through the development of communities of innovation leaders with capacities for the problem-solving in our transformative societies.
+                    </p>
+
+                </div>
+            </div>
+            <div class="about_first_region_down">
+                <div class="about_writeUp">
+                    <h4 class="about_header">Vision</h4>
+                    <p>
+                        A-Hub envisions been the ultimate innovation center in Nigeria developing world-class talents and capacities for a transformative Nigeria. 
+                    </p>
+                </div>
+                <div class="img_region">
+                    <img src="{%static 'images/group2.jpg'%}" alt="image1">
+                </div>
+            </div>
+
+        </div>
+        <div class="about_second_region">
+            <h4 class="title">Scope of Expertise</h4>
+            <div class="about_second_region lists">
+                <div class="about_scope_expertise">
+                    <h4>
+                        Software Development
+                    </h4> 
+                </div>
+                <div class="about_scope_expertise">
+                    <h4>Internet of Things(IOT)</h4>
+                    
+                </div>
+                <div class="about_scope_expertise">
+                <h4> Cloud Computing</h4>
+                </div>
+                <div class="about_scope_expertise">
+                    <h4>Data Science</h4>
+                </div>
+                <div class="about_scope_expertise">
+                    <h4>Digital Enterprise Automation</h4>
+                </div>
+                <div class="about_scope_expertise">
+                    <h4>System Integration</h4> 
+                </div>
+                <div class="about_scope_expertise">
+                    <h4>Outsourcing</h4>
+                </div>
+                <div class="about_scope_expertise">
+                    <h4>Artificial Intelligence</h4>
+                </div>
+                <div class="about_scope_expertise">
+                    <h4>Digital Marketing Automation</h4>
+                </div>
+                <div class="about_scope_expertise">
+                    <h4>CyberSecurity</h4>
+                </div>
+                <div class="about_scope_expertise">
+                    <h4>Digital Graphics Design</h4>
+                </div>
+                <div class="about_scope_expertise">
+                    <h4>Animation</h4> 
+                </div>
+
+            </div>
+        </div>
+        <div class="about_third_region">
+            <h3 class="about_header">Meet the Team</h3>
+            <div class="about_staff_profile_region">
+
+            {%for i in staffProfile%}
+                <div class="about_staff_profile">
+                    
+                    <div class=" img_box">
+                        {%if i.photo%}
+                            <img src="{{i.photo.url}}" alt="staff_image">
+                        {%endif%}
+                            
+                        
+                    </div>
+                    <div class="about_staff_info">
+                        <h4 class="about_staff_info name"> {{i.firstName}} {{i.otherName}}</h4>
+                        <h5 class="about_staff_info rank">
+                            {%for role in i.role.all%}
+                            {{role.name}},
+                            {%endfor%}
+                        </h5>
+                        <div class="about_staff_info proficiency">
+                            {%for proficiency in i.proficiency.all %}
+                            <div class="about_staff_info proficiency proficiency0">
+                                {{proficiency.name}}
+                            </div>
+                            {%endfor%}
+                        </div>
+                        
+                    </div>
+                    <div class="about_staff_info handles">
+                        <a href="#">LinkedIn</a>
+                        <a href="#">Instagram</a>
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            {%endfor%}
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+{%endblock%}
