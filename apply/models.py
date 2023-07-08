@@ -28,7 +28,7 @@ class Biodata(models.Model):
         ('postgraduate', 'Postgraduate Internship Programs'),
     ]
     COURSES = [
-        ('SWeb Development', 'Web Development'),
+        ('Web Development', 'Web Development'),
         ('App Development', 'App Development'),
         ('Data Science', 'Data Science'),
         ('Digital Marketing', 'Digital Marketing'),
