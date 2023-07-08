@@ -11,7 +11,7 @@
     <div class="card-img-overlay">
       <h1 class="card-title">Unlock Your Tech Potential</h1>
       <p class="card-text">Welcome to A-hub, where we empower individuals with the skills and knowledge for successful tech careers.</p>
-      <a href="{% url 'student_login' %}" class=" apply-now btn btn-primary btn-lg">Apply Now</a>
+      <a href="{% url 'registration_form' %}" class=" apply-now btn btn-primary btn-lg">Apply Now</a>
     </div>
   </div>
 </section>
@@ -134,7 +134,7 @@
     <div class="container">
       <div class=" login-btn container text-center">
         <h2 class="text-center intern-text">Already an intern?</h2>
-        <a href="#" class=" for-intern btn btn-secondary btn-sm">Login</a>
+        <a href="{% url 'student_login' %}" class=" for-intern btn btn-secondary btn-sm">Login</a>
         </div>
       <!-- <a href="#apply" class=" for-intern btn btn-primary btn-lg">Apply for Internship</a> -->
       <!-- Add internship application form here -->
