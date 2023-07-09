@@ -11,6 +11,8 @@
   
   .fpassword, .noaccount {
     margin-top: 10px;
+    text-decoration: none;
+    color: #AAA;
   }
   
   .error {

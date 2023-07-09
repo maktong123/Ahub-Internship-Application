@@ -614,6 +614,12 @@ body{
     border: 1px solid  rgba(106, 90, 205, 1) ;
     color: #fff; 
     }
+
+    footer{
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
     footer .social-links a i{
       margin: 10px;
       align-items: center;
@@ -633,3 +639,43 @@ body{
         font-size: 1.5rem;
         font-weight: lighter;
       }
+
+      /* reset password */
+      .reset-container{
+        margin: 0 auto;
+        max-width: 800px;
+        background-color: #FFFFFF;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      .reset-container h2{
+        margin-bottom: 50px;
+      }
+      
+      .reset-email{
+        padding: 20px;
+      }
+      
+      .reset button{
+        margin: 50px;
+        background-color: var(--primary-color);
+        border: 2px solid #6355ca;
+      }
+      
+      .reset button:hover{
+        background-color: var(--primary-color);
+        border: 2px solid #6355ca;
+        opacity: 0.6;
+      }
+      
+      /* Media Queries for responsiveness */
+      @media only screen and (max-width: 600px) {
+        .reset-container {
+          max-width: 100%;
+        }
+        
+        .reset button {
+          margin: 20px;
+        }
+      }
+      

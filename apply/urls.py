@@ -11,5 +11,7 @@ urlpatterns = [
     path('login/', student_login, name='student_login'),
     path('student/profile/', student_profile, name='student_profile'),
     path('forms/student/update/', student_update, name='student_update'),
-    path('signout', signOut, name='signout')
+    path('signout', signOut, name='signout'),
+    path('reset_password/', reset_password, name='reset_password'),
+   
 ]
