@@ -48,6 +48,11 @@
             <a class="nav-link" href="{% url 'registration_form' %}"> <button class=" apply btn btn-outline-success" type="submit">Apply</button></a>
           </li>
       </ul>
+      {% if request.user.is_authenticated %}
+        <form class="d-flex">
+          <a href="{% url 'signout' %}" class="btn btn-outline-danger" type="submit">Logout</a>
+        </form>
+      {% endif %}
        
       
     </div>
