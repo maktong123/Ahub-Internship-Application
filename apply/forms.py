@@ -102,7 +102,7 @@ class StudentRegistrationForm(forms.Form):
         ('Postgraduate', 'Postgraduate Internship Programs'),
     ]
     COURSES =[
-        ('SWeb Development', 'Web Development'),
+        ('Web Development', 'Web Development'),
         ('App Development', 'App Development'),
         ('Data Science', 'Data Science'),
         ('Digital Marketing', 'Digital Marketing'),
