@@ -1,19 +1,9 @@
-.login-form {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #6355ca;
-    border-radius: 15px;
-    color: #6355ca
-  }
   
   .login-header {
     margin-bottom: 20px;
   }
   
-  .emailogin, .passwordlogin {
-    margin-bottom: 15px;
-  }
+  
   
   .loginbtn button {
     width: 100%;
@@ -25,6 +15,7 @@
   
   .error {
     color: red;
+    background-color: rgb(126, 89, 89);
   }
   
   /* Bootstrap classes */

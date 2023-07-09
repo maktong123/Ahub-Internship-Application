@@ -1,13 +1,61 @@
 <!-- login.html -->
+{% extends 'main.html' %}
 {% load static%}
+
+{% block content %}
 <head>
 	<title>login</title>
     <link rel="stylesheet" type="text/css" href="{% static 'login.css'%}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         .login-form{
-            margin-top: 10%;
+            margin-top: 80px;
+            max-width: 500px;
+            padding: 20px;
+            border: 1px solid #6355ca;
+            border-radius: 15px;
+            color: #6355ca;
+            font-size: 20px;
+            margin-bottom: 20px;
+        
         }
+        .form-control{
+            width: 400px;
+            height: 50px;
+            text-align: center;
+            margin-left: 20px;
+            margin-top: -10px;
+            border-left:none; ;
+            border-right: none;
+            border-radius: 10px;
+            border-color: #6355ca;
+
+  }
+  .profile-lable{
+      margin-top: 30px;
+      margin-left: 20px;
+  }
+  .emailogin, .passwordlogin {
+    line-height: 50px;
+    font-size: 20px;
+    
+  }
+    .fpassword{
+        text-align: center;
+        margin-left: 0px;
+        margin-top: 0px;
+        border-left:none; ;
+        border-right: none;
+        border-radius: 10px;
+}
+    .noaccount{
+        text-align: center;
+        margin-left: 0px;
+        margin-top: 20px;
+        border-left:none; ;
+        border-right: none;
+        border-radius: 10px;
+    }
     </style>
 </head>
 
@@ -21,11 +69,11 @@
 	<form id="myForm" method="POST" action="">
     {% csrf_token %}
 	<div  class="emailogin">
-        <label for="username">Username:</label>
+        <label for="username" class="profile-lable">Username:</label>
         <input type="text" name="username" class="form-control" placeholder="Enter Username">
     </div>
 	<div  class="passwordlogin">
-        <label for="password">Password:</label>
+        <label for="password" class="profile-lable">Password:</label>
         <input type="password" name="password"class="form-control" placeholder="Enter Password">
     </div>
    
@@ -43,4 +91,5 @@
 	</div>
 
 </body>
+{% endblock content %}
 
