@@ -15,6 +15,76 @@ class CheckOutForm(ModelForm):
         fields = '__all__'
 
 class BiodataForm(forms.ModelForm):
+    GENDER_CHOICES = [
+        ('male', 'Male'),
+        ('female', 'Female'),
+    ]
+    PROGRAMMING_SKILL_CHOICES = [
+        ('yes', 'Yes'),
+        ('no', 'No'),
+    ]
+    first_name = forms.CharField(widget=forms.TextInput(attrs={
+        'type': "text",
+        "class": "form-control",
+        "placeholder": "First name"
+    }),max_length=30, required=False)
+    other_names = forms.CharField(widget=forms.TextInput(attrs={
+        'type': "text",
+        "class": "form-control",
+        "placeholder": "other_names"
+    }),max_length=30, required=False)
+    gender = forms.ChoiceField(widget=forms.TextInput(attrs={
+        'type': "text",
+        "class": "form-control",
+        "placeholder": "gender"
+    }), required=False, choices=GENDER_CHOICES )
+    date_of_birth = forms.DateField(widget=forms.TextInput(attrs={
+        'type': "text",
+        "class": "form-control",
+        "placeholder": "date of birth"
+    }), required=False)
+    start_date = forms.DateField(widget=forms.TextInput(attrs={
+        'type': "text",
+        "class": "form-control",
+        "placeholder": "start date"
+    }), required=False)
+    end_date = forms.DateField(widget=forms.TextInput(attrs={
+        'type': "text",
+        "class": "form-control",
+        "placeholder": "end date"
+    }), required=False,)
+    phone_number = forms.IntegerField(widget=forms.TextInput(attrs={
+        'type': "text",
+        "class": "form-control",
+        "placeholder": "phone number"
+    }), required=False)
+    school_name = forms.CharField(widget=forms.TextInput(attrs={
+        'type': "text",
+        "class": "form-control",
+        "placeholder": "school name"
+    }),max_length=300, required=False)
+    state_of_origin = forms.CharField(widget=forms.TextInput(attrs={
+        'type': "text",
+        "class": "form-control",
+        "placeholder": "state of origin"
+    }),max_length=254, required=False,)
+    any_programming_skill =forms.ChoiceField(widget=forms.TextInput(attrs={
+        'type': "text",
+        "class": "form-control",
+        "placeholder": "any programming skill"
+    }), required=False, choices=PROGRAMMING_SKILL_CHOICES)
+    number_of_months = forms.IntegerField(widget=forms.TextInput(attrs={
+        'type': "text",
+        "class": "form-control",
+        "placeholder": "number of months"
+    }), required=False)
+    email_address = forms.EmailField(widget=forms.TextInput(attrs={
+        'type': "email",
+        "class": "form-control",
+        "placeholder": "Email@example.com"
+    }),max_length=254)
+    
+    
     class Meta:
         model = Biodata
         fields = [

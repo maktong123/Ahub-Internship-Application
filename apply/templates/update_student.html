@@ -5,14 +5,56 @@
 {% block content %}
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{% static 'edit.css' %}">
+  <style>
+    .update_container{
+    max-width: 800px;
+    margin-left: 40%;
+  }
+  #update_h2{
+    margin-top: 100px;
+    color: #6355ca;
+    margin-bottom: 30px;
+    
+  }
+  #update_col-md-6{
+    line-height:25px;
+    color: #6355ca;
+  }
+  #update_btn-primary{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 200px;
+  height: 50px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid #fff;
+  background-color: #6355ca;
+  color: #fff;
+  margin-top: -10px;
+  margin-left: 5px;
+
+  }
+  #update_btn-primary:hover{
+  background-color: #f2ac21;
+  transition: all 1s ease-in;
+}
+.border1-left{
+    background-color: var(--primary-color);
+    padding: 1px;
+    margin-right: 5px;
+  }  
+  </style>
 </head>
 
 <div class="update_container">
-  <h2 class="h2" id="update_h2"><span class="border-left"></span>UPDATE PROFILE</h2>
+  
   <div class="row">
     <div class="col-md-6" id="update_col-md-6">
       <form method="post" enctype="multipart/form-data">
+        <h2 id="update_h2"><span class="border1-left"></span>UPDATE PROFILE</h2>
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn btn-primary" id="update_btn-primary">Save</button>

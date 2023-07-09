@@ -1,6 +1,7 @@
   
   .login-header {
     margin-bottom: 20px;
+    margin-left: 40%;
   }
   
   
@@ -22,9 +23,7 @@
   
   /* Bootstrap classes */
   
-  .container {
-    max-width: 600px;
-  }
+  
   
   .text-center {
     text-align: center;

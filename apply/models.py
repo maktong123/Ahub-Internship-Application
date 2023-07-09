@@ -54,7 +54,7 @@ class Biodata(models.Model):
     first_name = models.CharField(max_length=255)
     other_names = models.CharField(max_length=255)
     gender = models.CharField(max_length=10, choices=GENDER_CHOICES)
-    phone_number = models.CharField(max_length=20)
+    phone_number = models.IntegerField()
     date_of_birth = models.DateField()
     email_address = models.EmailField()
     state_of_origin = models.CharField(max_length=100)
