@@ -2,12 +2,17 @@ from django.shortcuts import render, redirect, get_object_or_404
 from datetime import date, datetime
 from .models import *
 from .forms import *
-import pytz
 from .forms import LoginForm
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate, logout
 from django.conf import settings
+import random
+import string
+from django.template.loader import render_to_string
+from django.core.mail import send_mail
+
+
 # Create your views here.
 
 def checkOut(request):
@@ -108,6 +113,55 @@ def student_login(request):
     else:
         return render(request, 'login.html')
         
+
+
+
+from .forms import ResetPasswordForm
+
+# ...
+
+def reset_password(request):
+    form = ResetPasswordForm(request.POST or None)
+    if request.method == 'POST' and form.is_valid():
+        email = form.cleaned_data['email']
+        try:
+            user = User.objects.get(email=email)
+        except User.DoesNotExist:
+            user = None
+        if user:
+            # Generate a random unique password
+            new_password = ''.join(random.choices(string.ascii_letters + string.digits, k=10))
+
+            # Update the user's password
+            user.set_password(new_password)
+            user.save()
+
+            # Render the email template
+            email_subject = 'New Password'
+            email_body = render_to_string('email.html', {
+                'username': user.username,
+                'new_password': new_password,
+            })
+
+            # Send the email
+            send_mail(
+                email_subject,
+                '',
+                'harryprincess419@gmail.com',
+                [email],
+                html_message=email_body,
+                fail_silently=False,
+            )
+
+            messages.success(request, 'Please check your email for the new password.')
+        else:
+            messages.error(request, 'User with the specified email does not exist.')
+        return redirect('reset_password')
+
+    context = {'form': form}
+    return render(request, 'reset_password.html', context)
+
+
 @login_required
 def student_update(request):
     if request.method == 'POST':
