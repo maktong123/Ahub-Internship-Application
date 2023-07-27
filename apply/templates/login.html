@@ -1,0 +1,130 @@
+<!-- login.html -->
+{% extends 'main.html' %}
+{% load static%}
+
+{% block content %}
+<head>
+	<title>login</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'login.css'%}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+    .login-form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #6355ca;
+        border-radius: 15px;
+        color: #6355ca;
+        margin-top: 5%;
+        margin-bottom: 8%;
+        font-size: 25px;
+  }
+  
+  .login-header {
+    margin-bottom: 20px;
+  }
+  
+  .emailogin, .passwordlogin {
+    margin-bottom: 10px;
+    
+  }
+  
+  .loginbtn button {
+    width: 100%;
+  }
+  
+  .fpassword, .noaccount {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  
+  .error {
+    color: red;
+  }
+  
+  /* Bootstrap classes */
+  
+  .container {
+    max-width: 600px;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .mb-3 {
+    margin-bottom: 10px;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  .mt-2 {
+    margin-top: 10px;
+  }
+  
+  .text-danger {
+    color: red;
+  }
+  #submit{
+      width: 200px;
+      height: 50px;
+      padding: 5px;
+      text-align: center;
+      border-radius: 10px;
+      border: 1px solid #fff;
+      background-color: #6355ca;
+      color: #fff;
+  }
+  #submit:hover{
+      background-color: #f2ac21;
+      transition: all 1s ease-in;
+  }
+    .form-control{
+        margin-top: 20px;
+        width: 350px;
+        height: 50px;
+        background-color:#fff;
+        border: 1px solid #6355ca;  
+        color:  #6355ca;;
+        border-radius: 20px;
+        margin-bottom: 10px;
+}
+    </style>
+</head>
+
+<body>
+	
+	<div class="login-form">
+        <center><h2 class="login-header">LOGIN HERE</h2></center>
+        {% if error_message %}
+        <p class="error">{{ error_message }}</p>
+        {% endif %} 
+	<form id="myForm" method="POST" action="">
+    {% csrf_token %}
+	<div  class="emailogin">
+        <label for="username" class="profile-lable">Username:</label>
+        <input type="text" name="username" class="form-control" placeholder="Enter Username">
+    </div>
+	<div  class="passwordlogin">
+        <label for="password" class="profile-lable">Password:</label>
+        <input type="password" name="password"class="form-control" placeholder="Enter Password">
+    </div>
+   
+	<div class="loginbtn">
+        <button type="submit" class="btn btn-primary" value="Login" id="submit">Login</button>
+    </div>
+	<div class="fpassword">
+        <a href="{% url 'reset_password'%}" >Forgot password?</a>
+    </div>
+	<div class="noaccount">
+        <a href="{% url 'registration_form'%}" >Don't have an account yet?</a>
+    </div>
+	
+</form>
+	</div>
+
+</body>
+{% endblock content %}
+

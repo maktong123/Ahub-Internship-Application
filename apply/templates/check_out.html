@@ -1,0 +1,52 @@
+{%extends 'main.html'%}
+{%load static%}
+{% block title %}Ahub|Check_Out Page{% endblock title %}
+{%block content%}
+
+<body>
+    <form action="" method="POST">
+        {%csrf_token%}
+            <div class="check_out_Main">
+                <div class="check_out_Header">
+                    <div class="titler">
+                        <h1>Check - Out</h1>
+                    </div>
+                    <div class="check_out_Flyer">Check - Out, <span class ="surname">Surname!</span></div>
+                </div>
+                <div class="check_out_Body">
+                    <div class="check_out_days">
+                        <div class="check_out_days_present_region">
+                            <h4 class="check_out_days_present">DAYS PRESENT</h4>
+                            <span class="check_out_days_number">
+                                {{daysPresent}}
+                            </span>
+                        </div>
+                        <div class="check_out_days_absent_region">
+                            <h4 class="check_out_days_absent">DAYS ABSENT</h4>
+                            <span class="check_out_days_number">
+                                {{daysAbsent}}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="check_out_date_check_region">
+                        <h4><span class="date">{{current_day}}</span></h4>
+                        <div class="check_out_region">
+                            <label for="check_out_summary"></label>
+                            {{form.checkOutText}}
+                            <!-- <textarea name="today_summary" placeholder="Today's Summary" id="check_out_summary" cols="30" rows="5" maxlength="100"> -->
+                            </textarea>
+                            <div class="check_out_check_out">
+                                <label for="check_out">Check Out</label>
+                                {{form.check_out}}
+                            <!-- <input type="checkbox" name="check_out" id="check_out_button"> -->
+                            </div>
+                            
+                            <button type="submit" class = "button check_out">Proceed</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </form>
+    
+</body>
+{%endblock%}

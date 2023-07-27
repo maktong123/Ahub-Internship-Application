@@ -1,0 +1,99 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'edit.css' %}">
+<title>Update Profile</title>
+</head>
+<div class="container">
+        <h2> <span class="border-left"></span> EDIT</h2>
+        <form method="Post" action="/edit-profile/" style="margin-top: 30px;">
+            {%csrf_token%}
+            <div class="form-group mb-3">
+                <!-- double curly braces is used to display data from the database -->
+                <label class="profile-label">SURNAME:</label>
+                {{form.surname}}
+                {{form.surname.errors}}
+            </div>
+            <div class="form-group mb-3">
+                <label class="profile-label">OTHER NAMES:</label>
+                {{form.other_names}}
+                {{form.other_names.errors}}
+            </div>
+            <div class="form-group mb-3">
+                <label class="profile-label">GENDER:</label>
+                {{form.gender}}
+                {{form.gender.errors}}
+             </div>
+            <div class="form-group mb-3">
+                <label class="profile-label">DATE OF BIRTH:</label>
+                {{form.date_of_birth}}
+                {{form.date_of_birth.errors}}
+            </div>
+            <div class="form-group mb-3">
+                <label class="profile-label">START DATE:</label>
+                {{form.start_date}}
+                {{form.start_date.errors}}
+            </div>
+            <div class="form-group mb-3">
+                <label class="profile-label">END DATE:</label>
+                {{form.end_date}}
+                {{form.end_date.errors}}
+            </div>
+            <div class="form-group mb-3">
+                <label class="profile-label">EMAIL ADDRESS:</label>
+                {{form.email_address}}
+                {{form.email_address.errors}}
+            </div>
+            <div class="form-group mb-3">
+                <label class="profile-label">PHONE NUMBER:</label>
+                {{form.phone_number}}
+                {{form.phone_number.errors}}
+            </div>
+
+            <div class="form-group mb-3">
+                <label class="profile-label">SCHOOL NAME:</label>
+                {{form.school_name}}
+                {{form.school_name.errors}}
+            </div>
+            <div class="form-group mb-3">
+                <label class="profile-label">STATE OF ORIGIN:</label>
+                {{form.state_of_origin}}
+                {{form.state_of_origin.errors}}
+            </div>
+            <div class="form-group mb-3">
+                <label class="profile-label">ANY PROGRAMMING SKILL/SKILLS:</label>
+                {{form.any_programming_skill}}
+                {{form.any_programming-skill.errors}}
+            </div>
+            <div class="form-group mb-3">
+                <label class="profile-label">NUMBER OF MONTHS:</label>
+                {{form.number_of_months}}
+                {{form.number_of_months.errors}}
+            </div>
+            <div>
+                <label class="profile-label">COURSES:</label>
+                {{form.courses}}
+                {{form.courses.errors}}
+            </div>
+            <div>
+                <label class="profile-label">UPLOAD PHOTO:</label>
+                {{form.upload_photo}}
+                {{form.upload_photo.errors}}
+            </div>
+            <div>
+                <label class="profile-label">UPLOAD IT LETTER:</label>
+                {{form.upload_it_letter}}
+                {{form.upload_it_letter.errors}}
+            </div>
+            <!-- <input type="submit" class="btn btn-outline-success"> -->
+    
+            <button type="submit" class="btn btn-primary"> Save </button>
+        </form>
+    </div>
+    {% endblock content %}
+
+    

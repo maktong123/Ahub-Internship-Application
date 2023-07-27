@@ -1,0 +1,84 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'contact.css' %}">
+    <style>
+        .cont{
+            margin-top: 80px;
+            
+        }
+        #btn-primary{
+    width: 200px;
+    height: 50px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    background-color: #6355ca;
+    color: #fff;
+    margin-top: -10px;
+    margin-left: 5px;
+    margin-bottom: 80px;
+   
+
+    }
+    #btn-primary:hover{
+    background-color: #f2ac21;
+    transition: all 1s ease-in;
+}
+
+    </style>
+</head>
+<body class="cont">
+    <div>
+        <h2><span class="border-left"></span>Contact Us</h2>
+    </div>
+    
+    <div class="containe">
+        <div class="div-three"> 
+            <div class="div-two">
+                <p>You can get to know us more by stopping by at our office, reaching out to us by mail or giving us a call.</p>
+            </div>
+            <h3>Office Address:</h3><p>Akilla Machunga Road, Off National Library, Adjacent Jay FM, Jos, Plateau State, Nigeria  </a></p>
+            <h3>Email Address:</h3><p><a href="mailto:ahubict@gamil.com">ahubict@gamil.com</a></p>
+            <h3>Phone Line:</h3><p><a href="tel:"></a></p>
+
+        </div>
+
+        <div class="contact-sec-two">
+        <h2 class="text-center">Send Us Message</h2>
+            <form method="post" action="">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+                </div>
+                <div class="form-group">
+                <input type="submit" value="Send a message" class="btn btn-primary" id="btn-primary">
+            </div>
+        </form>
+    </div>
+    </div>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
+{% endblock content %}
